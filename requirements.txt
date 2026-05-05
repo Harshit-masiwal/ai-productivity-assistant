@@ -14,4 +14,4 @@ streamlit
 python-dotenv
 langchain-groq
 pypdf
-ddgs
+ddgs>=1.0.0
