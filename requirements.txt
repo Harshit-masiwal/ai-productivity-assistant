@@ -1,0 +1,16 @@
+langchain
+langgraph
+langchain-core
+langchain-community
+google-generativeai
+langchain-openai
+fastapi
+uvicorn
+python-multipart
+requests
+duckduckgo-search
+markdownify
+streamlit
+python-dotenv
+langchain-groq
+pypdf
