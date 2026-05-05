@@ -13,6 +13,14 @@ The app combines an AI chat assistant with practical career-focused utilities:
 resume analysis, job search, live weather, and calculation tools. It is designed
 as a portfolio-ready project with a clean API backend and a modern Streamlit UI.
 
+## Live Deployment
+
+> **Streamlit Frontend:** [`https://ai-appuctivity-assistant-eghmetittlkdxadyhaymbk.streamlit.app/`](https://ai-appuctivity-assistant-eghmetittlkdxadyhaymbk.streamlit.app/)
+
+> **FastAPI Backend:** [`https://ai-productivity-assistant-2.onrender.com`](https://ai-productivity-assistant-2.onrender.com)
+
+> **FastAPI Docs:** [`https://ai-productivity-assistant-2.onrender.com/docs`](https://ai-productivity-assistant-2.onrender.com/docs)
+
 ## Highlights
 
 - AI assistant powered by Groq and LangChain
