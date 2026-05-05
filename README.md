@@ -184,11 +184,45 @@ curl -X POST http://127.0.0.1:8000/weather \
 
 ## Deployment Notes
 
-For deployment, set these environment variables in your hosting platform:
+This project includes a `render.yaml` Blueprint for Render deployment.
+
+### Option 1: Deploy With Render Blueprint
+
+1. Push this project to GitHub.
+2. Open Render.
+3. Choose **New +** -> **Blueprint**.
+4. Connect your GitHub repository.
+5. Render will detect `render.yaml` and create two web services:
+   - `ai-productivity-assistant-api`
+   - `ai-productivity-assistant-ui`
+
+Set these environment variables in the backend service:
 
 ```bash
 GROQ_API_KEY=your_groq_api_key
 OPENWEATHER_API_KEY=your_weather_api_key
+```
+
+Set this environment variable in the Streamlit frontend service:
+
+```bash
+API_URL=https://your-fastapi-backend-url.onrender.com
+```
+
+### Option 2: Manual Render Setup
+
+Backend service:
+
+```bash
+Build Command: pip install -r requirements.txt
+Start Command: uvicorn backend:app --host 0.0.0.0 --port $PORT
+```
+
+Frontend service:
+
+```bash
+Build Command: pip install -r requirements.txt
+Start Command: streamlit run app.py --server.address 0.0.0.0 --server.port $PORT
 ```
 
 Recommended deployment split:
