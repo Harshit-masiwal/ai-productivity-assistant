@@ -197,7 +197,10 @@ def show_api_error(error: Exception) -> None:
         st.error(detail)
         return
 
-    st.error(f"Backend unavailable at {API_URL}. Start FastAPI and try again.")
+    st.error(
+        f"Backend unavailable at {API_URL}. "
+        "For local use, start FastAPI first. For Render, set API_URL to your deployed backend URL."
+    )
 
 
 st.sidebar.title("Workspace")
