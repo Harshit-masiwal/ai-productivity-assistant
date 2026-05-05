@@ -122,6 +122,12 @@ Start the FastAPI backend:
 uv run uvicorn backend:app --host 127.0.0.1 --port 8000 --reload
 ```
 
+If port `8000` is already in use, run the backend on port `8001`:
+
+```bash
+uv run uvicorn backend:app --host 127.0.0.1 --port 8001 --reload
+```
+
 Start the Streamlit frontend in another terminal:
 
 ```bash
@@ -130,9 +136,13 @@ uv run streamlit run app.py --server.address 127.0.0.1 --server.port 8501
 
 ## Working Local URLs
 
-> **FastAPI Backend:** [`http://127.0.0.1:8000`](http://127.0.0.1:8000)
+
+
+> **FastAPI Backend:** [`http://127.0.0.1:8001`](http://127.0.0.1:8001)
 
 > **FastAPI Docs:** [`http://127.0.0.1:8000/docs`](http://127.0.0.1:8000/docs)
+
+> **FastAPI Docs Alternative:** [`http://127.0.0.1:8001/docs`](http://127.0.0.1:8001/docs)
 
 > **Streamlit Frontend:** [`http://127.0.0.1:8501`](http://127.0.0.1:8501)
 
