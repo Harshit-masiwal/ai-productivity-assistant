@@ -113,6 +113,7 @@ Create a `.env` file in the project root:
 
 ```bash
 GROQ_API_KEY=your_groq_api_key
+GROQ_MODEL=openai/gpt-oss-20b
 OPENWEATHER_API_KEY=your_weather_api_key
 ```
 
@@ -202,6 +203,7 @@ Set these environment variables in the backend service:
 
 ```bash
 GROQ_API_KEY=your_groq_api_key
+GROQ_MODEL=openai/gpt-oss-20b
 OPENWEATHER_API_KEY=your_weather_api_key
 ```
 

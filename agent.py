@@ -11,6 +11,7 @@ from langchain_community.tools import DuckDuckGoSearchResults
 from tools import get_weather, calculator, search_jobs
 
 groq_api_key = os.getenv("GROQ_API_KEY")
+groq_model = os.getenv("GROQ_MODEL", "openai/gpt-oss-20b")
 
 if not groq_api_key:
     raise ValueError("GROQ_API_KEY is missing. Add it to your .env file.")
@@ -18,7 +19,7 @@ if not groq_api_key:
 search = DuckDuckGoSearchResults()
 
 model = ChatGroq(
-    model="llama-3.1-8b-instant",
+    model=groq_model,
     temperature=0.7,
     api_key=groq_api_key
 )
